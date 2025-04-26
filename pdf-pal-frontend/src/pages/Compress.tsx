@@ -8,13 +8,14 @@ const Compress = () => {
     const [compressedPdfBlob, setCompressedPdfBlob] = useState<Blob | null>(null);
     const [openDialog, setOpenDialog] = useState(false);
     const [outputFileSize, setOutputFileSize] = useState<string | null>(null);
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
     const callApi = async () => {
         try {
             const formData = new FormData();
             files.forEach((file) => formData.append("files", file));
 
-            const response = await fetch("http://localhost:8000/compress", {
+            const response = await fetch(`${API_BASE_URL}/compress`, {
                 method: "POST",
                 body: formData,
             });

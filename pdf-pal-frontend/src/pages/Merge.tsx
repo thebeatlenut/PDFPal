@@ -7,13 +7,14 @@ const Merge = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [mergedBlobPdf, setMergedBlobPdf] = useState<Blob | null>(null);
   const [openDialog, setOpenDialog] = useState(false);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const callApi = async () => {
     try {
       const formData = new FormData();
       files.forEach((file) => formData.append("files", file));
 
-      const response = await fetch("http://localhost:8000/merge", {
+      const response = await fetch(`${API_BASE_URL}/merge`, {
         method: "POST",
         body: formData,
       });
