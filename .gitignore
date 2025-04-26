@@ -1,0 +1,20 @@
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore Python cache
+**/__pycache__/
+**/*.pyc
+
+# Ignore environment files
+*.env
+
+# Ignore OS junk
+.DS_Store
+
+# Ignore logs
+*.log
+
+# Ignore Vercel or deployment folders if generated
+.vercel/
+build/
+dist/

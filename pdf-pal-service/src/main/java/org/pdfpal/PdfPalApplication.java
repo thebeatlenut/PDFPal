@@ -1,0 +1,11 @@
+package org.pdfpal;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PdfPalApplication {
+    public static void main(String[] args) {
+            SpringApplication.run(PdfPalApplication.class, args);
+    }
+}
