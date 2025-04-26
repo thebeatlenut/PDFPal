@@ -19,7 +19,7 @@ type MenuItemProps = {
 };
 
 const MenuItemComponent = (props: MenuItemProps) => {
-  const { open, path, icon, label, navigate, subItems = [] } = props;
+  const { path, icon, label, navigate, subItems = [] } = props;
   const { selected } = useAppSelector((state) => state.nav);
   const isActive = selected === path.split("/")[1];
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

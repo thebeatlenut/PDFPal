@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { Footer, Header, Sidebar } from "./components";
+import { Header, Sidebar } from "./components";
 import PdfPalRoutes from "./Router";
 
 const App: React.FC = () => {

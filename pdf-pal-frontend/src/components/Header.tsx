@@ -1,5 +1,4 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
-import { useWindowWidth } from "../hooks";
 import { useNavigate } from "react-router-dom";
 
 type HeaderProps = {
@@ -10,7 +9,6 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
   const { title, detail, path = "/" } = props;
-  const width = useWindowWidth();
   const navigate = useNavigate();
 
   return (

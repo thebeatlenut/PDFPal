@@ -38,7 +38,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-const Drawer = styled(MuiDrawer)(({ theme }) => ({
+const Drawer = styled(MuiDrawer)(() => ({
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
