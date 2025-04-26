@@ -12,7 +12,8 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",  # Vite dev server
     "http://localhost:3000",  # Next.js (if needed)
-    "https://pdf-pal-five.vercel.app",  # Next.js (if needed)
+    "https://pdf-pal-five.vercel.app",
+    "https://pdf-dvm4ek4uc-nikita-mantris-projects.vercel.app"
 ]
 
 app.add_middleware(
